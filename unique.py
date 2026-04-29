@@ -1,10 +1,10 @@
 import pandas as pd
 
 df = pd.read_csv("data/image_location_map.csv")
-print("Unique postcodes in map file:", df["postcode"].nunique())
+print("Unique locations in map file:", df["location"].nunique())
 
 df = pd.read_csv("data/location_house_prices.csv")
-print(" Postcodes with house prices:", df["postcode"].nunique())
+print("Locations with house prices:", df["location"].nunique())
 
-df = pd.read_csv("data/final_combined_data.csv")  # adjust path if needed
-print("Postcodes in final dataset:", df["postcode"].nunique())
+df = pd.read_csv("data/final_combined_data.csv")
+print("Locations in final dataset:", df["location"].nunique())
