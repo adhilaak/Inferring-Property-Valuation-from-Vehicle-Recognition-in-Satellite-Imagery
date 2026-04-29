@@ -1,14 +1,14 @@
 import pandas as pd
 import os
 
-# Load Indian housing dataset
-housing_df = pd.read_csv("data/indian_house_prices.csv")
+
+housing_df = pd.read_csv("data/house_prices.csv")
 
 housing_df["Location"] = housing_df["Location"].astype(str).str.strip().str.lower()
 housing_df["Price"] = pd.to_numeric(housing_df["Price"], errors="coerce")
 housing_df["Area"] = pd.to_numeric(housing_df["Area"], errors="coerce")
 
-# Better metric than raw price
+
 housing_df["price_per_sqft"] = housing_df["Price"] / housing_df["Area"]
 
 
